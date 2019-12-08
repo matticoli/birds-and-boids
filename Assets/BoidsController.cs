@@ -50,4 +50,9 @@ public class BoidsController : MonoBehaviour
 	{
 		return goalObject.transform.position;
 	}
+
+    public GameObject getGoalObject()
+    {
+        return goalObject;
+    }
 }

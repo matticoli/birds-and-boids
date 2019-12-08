@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBoidsController: {fileID: 0}
-  boidType: 0
+  boidType: 1
   moveSpeed: 5
   rotationPercentage: 0.05
   separationProximity: 10

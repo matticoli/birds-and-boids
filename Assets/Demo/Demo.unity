@@ -1812,6 +1812,12 @@ Transform:
   m_Father: {fileID: 1351745830}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &359993969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1218537825695938, guid: 33edf201cbc6fe645ad9078697cd2aea,
+    type: 3}
+  m_PrefabInstance: {fileID: 20721343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &444184888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,7 +2054,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goalObject
       value: 
-      objectReference: {fileID: 444184888}
+      objectReference: {fileID: 359993969}
     - target: {fileID: 114512656485740072, guid: c98a4625f969d34408b889861c933b3a,
         type: 3}
       propertyPath: spawnRadius
@@ -2181,7 +2187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1187436267
 Transform:
   m_ObjectHideFlags: 0
@@ -2311,7 +2317,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351745828}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f6a61cd2f544724db51061fc818ac58, type: 3}
   m_Name: 
@@ -2354,7 +2360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1415275566
 Transform:
   m_ObjectHideFlags: 0
@@ -2530,7 +2536,7 @@ PrefabInstance:
     - target: {fileID: 114512656485740072, guid: c98a4625f969d34408b889861c933b3a,
         type: 3}
       propertyPath: numBoids
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114512656485740072, guid: c98a4625f969d34408b889861c933b3a,
         type: 3}
