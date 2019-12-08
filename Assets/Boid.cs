@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Leap.Unity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,14 +22,6 @@ public class Boid : MonoBehaviour
 	private Vector3 _separation	= Vector3.zero; // Avoidance vector for separation.
 	private Vector3 _alignment 	= Vector3.zero; // Alignment vector for positioning within group.
 	private Vector3 _cohesion	= Vector3.zero; // Direction vector for cohesion.
-	private Vector3 _attraction = Vector3.zero; // Direction vector for attraction/repulsion.
-
-
-    bool attract = false; //determine whether or not boids are attracted or repelled by hand
-    float hand_weight = 10; //weight in comparison to other factors
-    float mouse_radius = 20; //radius within which boids are affected
-
-
 	private Vector3 _groupAverageHeading;
 	private Vector3 _groupAveragePosition;		// Averaged position of all neighbours.
 	private Vector3	_spawnLocation;			// The spawn location of this Boid.
@@ -41,15 +34,20 @@ public class Boid : MonoBehaviour
 	delegate void TrajectoryUpdate();
 	private TrajectoryUpdate trajectoryUpdate;
 
+    private LeapServiceProvider lp;
+
 	void Awake()
 	{
 		_spawnLocation = transform.position;
 		SetTrajectoryUpdate();
+        lp = GameObject.Find("Leap Motion Controller Variant").GetComponent<LeapServiceProvider>();
 	}
 
 	void Update() 
 	{
-		trajectoryUpdate();
+        var frame = lp.GetLeapController().Frame();
+        Debug.Log(frame.Hands);
+        trajectoryUpdate();
 		// Translate along Z-axis in calculated trajectory
 		transform.Translate(0, 0, Time.deltaTime * moveSpeed);
 	}
