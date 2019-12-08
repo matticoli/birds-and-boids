@@ -1,4 +1,5 @@
-﻿using Leap.Unity;
+﻿//using Leap;
+using Leap.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,8 +46,8 @@ public class Boid : MonoBehaviour
 
 	void Update() 
 	{
-        var frame = lp.GetLeapController().Frame();
-        Debug.Log(frame.Hands);
+        
+        
         trajectoryUpdate();
 		// Translate along Z-axis in calculated trajectory
 		transform.Translate(0, 0, Time.deltaTime * moveSpeed);
@@ -122,11 +123,77 @@ public class Boid : MonoBehaviour
 		}
 		parentBoidsController.allBoidGameObjects.Add(gameObject); // Add this back to List
 
-		if (_groupSize > 0)
+        Leap.Hand left = new Leap.Hand();
+        Leap.Hand right = new Leap.Hand();
+        float leftIsFist = 0;
+        float rightIsFist = 0;
+        var frame = lp.GetLeapController().Frame();
+        Debug.Log(frame.Hands.Count);
+        if(frame.Hands.Count > 0)
+        {
+            Debug.Log("We have hands!");
+
+            foreach (Leap.Hand hand in frame.Hands)
+            {
+                if (hand.IsLeft)
+                {
+                    right = hand;
+                    Debug.Log("Right hand found!");
+                    
+                    
+                } else
+                {
+                    left = hand;
+                    Debug.Log("Left hand found!");
+                }
+            }
+
+            leftIsFist = left.GetFistStrength();
+            Debug.Log("Confidence left: " + leftIsFist);
+            
+            rightIsFist = right.GetFistStrength();
+            Debug.Log("Confidence right: " + rightIsFist);
+
+
+            //Leap.Hand hand = frame.Hands[0];
+            //float isFist = hand.GetFistStrength();
+
+        }
+
+
+        if (_groupSize > 0)
 		{
 			// Calculate center and add Vector to Goal.
 			_alignment = (_alignment / _groupSize) + (parentBoidsController.GetGoalPosition() - transform.position);
-			_cohesion = (_alignment + _separation) - transform.position;
+            Debug.Log("game object tag" + gameObject.tag);
+            switch (gameObject.tag) {
+                case "left":
+                    if (leftIsFist < .3)
+                    {
+                        Debug.Log("left hand is making fist!");
+                        _cohesion = (_alignment * (-1) + _separation) - transform.position;
+                    } else
+                    {
+                        _cohesion = (_alignment + _separation) - transform.position;
+                    }
+                    break;
+                case "right":
+                    if (rightIsFist < .3)
+                    {
+                        Debug.Log("right hand is making fist!");
+                        _cohesion = (_alignment * (-1) + _separation) - transform.position;
+                    }
+                    else
+                    {
+                        _cohesion = (_alignment + _separation) - transform.position;
+                    }
+                    break;
+                default:
+                    _cohesion = (_alignment + _separation) - transform.position;
+                    break;
+
+            }
+            
 			if (_cohesion != Vector3.zero)
 			{
 				transform.rotation = Quaternion.Slerp(transform.rotation,

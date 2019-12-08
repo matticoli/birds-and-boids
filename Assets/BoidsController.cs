@@ -15,6 +15,9 @@ public class BoidsController : MonoBehaviour
 	// Reference to in-scene goal GameObject for Boid objects in this BoidsController.
 	public GameObject goalObject;
 
+    public bool isLeft;
+    public bool isRight;
+
 	void Awake()
 	{
 		allBoidGameObjects = new List<GameObject>();
@@ -35,6 +38,12 @@ public class BoidsController : MonoBehaviour
 
 			GameObject boidObject = Instantiate(prefabBoid, transform.position + spawnOffset, Quaternion.identity);
 			allBoidGameObjects.Add(boidObject);
+            Debug.Log("left tag in boids controller " + isLeft);
+            Debug.Log("right tag in boids controller " + isRight);
+            
+            boidObject.tag = isLeft ? "left" : "right";
+            boidObject.tag = isRight ? "right" : "left";
+
 			boidObject.transform.parent = transform;
 			Boid boid = boidObject.GetComponent<Boid>();
 			if (boid)
