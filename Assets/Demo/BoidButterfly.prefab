@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 3565578515476113346}
   - component: {fileID: 5627421968479255914}
   m_Layer: 0
-  m_Name: BoidGoldfish
+  m_Name: BoidButterfly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,6 +190,18 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+--- !u!114 &291138039426591614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945027651299576208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce94588d97db38c408333cfe4b2c1143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8945027651299675942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,6 +271,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7b4f9e4e310b8dd47bbeefaec25bc4d7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a20fa05dc74f114bb237c4dba333092, type: 3}
+--- !u!1 &8945027651299576208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100022, guid: 3a20fa05dc74f114bb237c4dba333092,
+    type: 3}
+  m_PrefabInstance: {fileID: 8945027651299675942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8945027651299808688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400022, guid: 3a20fa05dc74f114bb237c4dba333092,

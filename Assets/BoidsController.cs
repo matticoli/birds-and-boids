@@ -15,6 +15,7 @@ public class BoidsController : MonoBehaviour
 	// Reference to in-scene goal GameObject for Boid objects in this BoidsController.
 	public GameObject goalObject;
 
+
     public bool isLeft;
     public bool isRight;
 
@@ -23,6 +24,8 @@ public class BoidsController : MonoBehaviour
 		allBoidGameObjects = new List<GameObject>();
 		SpawnInitialBoids(numBoids, spawnRadius);
 	}
+
+
 
 	/// Spawn the starting Boids.
 	/// @param numToSpawn - Total instances of prefabBoid to be instantiated
