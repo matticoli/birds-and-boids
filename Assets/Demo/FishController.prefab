@@ -43,8 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1613253597a98384787cbde80bbb0dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBoid: {fileID: 138252, guid: be999fe03c257ec4cb0a3a4b5ca72217, type: 3}
+  prefabBoid: {fileID: 1612938087907012, guid: f9f746937c394ba47b0f95947cfe3a27, type: 3}
   numBoids: 10
   allBoidGameObjects: []
   spawnRadius: 5
   goalObject: {fileID: 0}
+  isLeft: 0
+  isRight: 0
