@@ -272,12 +272,13 @@ PlayerSettings:
   androidGamepadSupportLevel: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
-  resolutionDialogBanner: {fileID: 0}
+  resolutionDialogBanner: {fileID: 2800000, guid: 3684a44bec11b294091c35b451fb5ced,
+    type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: ed28b2bd927d1ec45aac2f68c18c3b30, type: 3}
+      m_Icon: {fileID: 2800000, guid: c38959c465cadd84a9254995366e1b46, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
