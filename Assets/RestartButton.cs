@@ -8,7 +8,6 @@ public class RestartButton : MonoBehaviour
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(RestartGame);
-        GameObject.Find("Button").GetComponentInChildren<Text>().text = "Restart";
     }
     public void RestartGame()
     {
