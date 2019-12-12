@@ -125,8 +125,8 @@ public class Boid : MonoBehaviour
 
         Leap.Hand left = new Leap.Hand();
         Leap.Hand right = new Leap.Hand();
-        float leftIsFist = 0;
-        float rightIsFist = 0;
+        float leftIsFist = 1;
+        float rightIsFist = 1;
         var frame = lp.GetLeapController().Frame();
         Debug.Log(frame.Hands.Count);
         if(frame.Hands.Count > 0)
