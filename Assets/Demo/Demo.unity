@@ -3415,7 +3415,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Attract with open hand, repel with closed fist
+  m_Text: 'Attract with open hand, repel with closed fist
+
+    Left hand controls birds, right hand controls butterflies'
 --- !u!222 &1547978316
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3507,7 +3509,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Attract with open hand, repel with closed fist
+  m_Text: 'Attract with open hand, repel with closed fist
+
+    Left hand controls birds, right hand controls butterflies'
 --- !u!222 &1587513494
 CanvasRenderer:
   m_ObjectHideFlags: 0
