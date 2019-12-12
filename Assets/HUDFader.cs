@@ -14,7 +14,7 @@ public class HUDFader : MonoBehaviour
     void Update()
     {
         float f = gameObject.GetComponent<CanvasRenderer>().GetAlpha();
-        gameObject.GetComponent<CanvasRenderer>().SetAlpha(f - 0.025f);
+        gameObject.GetComponent<CanvasRenderer>().SetAlpha(f - 0.01f);
 
     }
 }
