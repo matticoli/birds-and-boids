@@ -2,6 +2,8 @@
 ![](./Assets/GameSplashScreen.jpg)
 Birds and Boids is a relaxing interactive experience that utilizes Leap Motion Hand-tracking in combination with Unity's 3D and sound engine features.
 
+Demo: [https://youtu.be/4rx7Z99PztU](https://youtu.be/4rx7Z99PztU)
+
 #### Developed in Unity 2019.2.2f1
 
 
